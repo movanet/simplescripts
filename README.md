@@ -92,7 +92,10 @@ The installation instructions for semantra is available here https://github.com/
 
 ### Usage
 
+```
 python eat.py
+```
+
 Note: The script will perform the described steps in the current directory if the directory variable is not modified.
 
 ### Function Descriptions
