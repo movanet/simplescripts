@@ -1,7 +1,10 @@
 # simplescripts
 Simple Python Script I use to augment my research
 
-Document Converter
+## Document Converter
+
+Go to the Converter folder
+
 This python script will convert various document types into plain text and splits the content into chunks based on a user-specified token limit. The supported document types are:
 
 Plain text files (.txt)
