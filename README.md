@@ -1,7 +1,7 @@
 # simplescripts
 Simple Python Script I use to augment my research. GPT-4 created this script, with my "direction" :)
 
-## Document Converter
+# Document Converter
 
 Go to the Converter folder
 
@@ -51,3 +51,57 @@ The script will print an error message and skip any files that are not in the su
 
 Output
 The script will create an output text file in the output directory. Each chunk of text is preceded by the name of the original file and a chunk number. After each chunk, the script writes a custom end-of-chunk identifier. After processing all files, the script will print the total number of files processed, chunks created, and the name of the output file.
+
+
+# Ingest all files to be passed to Semantra
+
+Go to Ingestor folder
+
+This repository contains a Python script that:
+
+- Converts .docx files in a specified directory to plain text.
+- Filters out unsupported files (.txt and .pdf files are supported, and converted .docx files).
+- Runs a command semantra with the filtered files as arguments.
+- Cleans up the converted temporary files.
+
+The script is useful for preprocessing documents for semantic analysis with the semantra tool.
+
+### Prerequisites
+To run this script, you need:
+
+- Python 3.6+
+- python-docx package: This is used for reading .docx files.
+- semantra: This is assumed to be a command-line tool installed in your system.
+
+### Installation
+#### Python
+If you don't have Python installed, download it from the official site:
+
+https://www.python.org/downloads/
+
+#### python-docx
+
+To install python-docx, run the following command in your terminal:
+
+```
+pip install python-docx
+```
+
+### Semantra
+The installation instructions for semantra is available here https://github.com/freedmand/semantra
+
+### Usage
+
+python eat.py
+Note: The script will perform the described steps in the current directory if the directory variable is not modified.
+
+### Function Descriptions
+
+get_all_files(directory: str) -> list:
+This function takes a directory path as input and returns a list of all files in that directory and its subdirectories.
+
+convert_docx_to_txt(docx_file: str) -> str:
+This function takes a .docx file path as input and returns its content as a string.
+
+is_supported_file(file: str) -> bool:
+This function takes a file path as input and returns a boolean indicating whether the file has a supported format (.txt or .pdf).
