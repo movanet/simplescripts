@@ -1,5 +1,5 @@
 # simplescripts
-Simple Python Script I use to augment my research
+Simple Python Script I use to augment my research. GPT-4 created this script, with my "direction" :)
 
 ## Document Converter
 
